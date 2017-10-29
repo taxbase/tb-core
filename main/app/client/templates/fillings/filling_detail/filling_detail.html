@@ -1,0 +1,137 @@
+<template name="FillingDetail">
+  <div class="filling-detail">
+      <div class="content-page">
+          <!-- Start content -->
+          <div class="content">
+              <div class="container">
+
+                  <div class="page-title-box">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <h4 class="page-title"><i class="mdi mdi-account-card-details"></i> Value Added Tax</h4>
+                        </div>
+                      </div>
+          
+                    </div>
+                  <!-- end row -->
+                  <section class="content-display">
+                      <div class="row">
+                          <div class="col-sm-8 col-sm-offset-2">
+
+                            {{#with getFillingData}}
+
+                              <div class="transaction-breakdown-wrap">
+                                  <div class="row">
+
+                                          <div class="panel panel-default">
+                                              <!-- <div class="panel-heading">
+                                                  <h4>Invoice</h4>
+                                              </div> -->
+                                              <div class="panel-body">
+                                                  <div class="clearfix">
+                                                      <div class="pull-left">
+                                                          <h3><img src="" alt="" height="24"> LOGO</h3>
+                                                      </div>
+                                                      <div class="pull-right">
+                                                          <h4>Invoice # <br>
+                                                              <strong>{{formatDateWithHyphens fileDate}}</strong>
+                                                          </h4>
+                                                      </div>
+                                                  </div>
+                                                  <hr>
+                                                  <div class="row">
+                                                      <div class="col-md-6">
+                                                          <div class="pull-left m-t-30">
+                                                            <p><strong><i class="mdi mdi-clipboard-account"></i> Tax ID: </strong> {{payId}}</p>
+                                                            <p><strong><i class="mdi mdi-calendar-check"></i> Start Date: </strong> {{formatDate startDate}}
+                                                              </p>
+                                                            <p><strong><i class="mdi mdi-calendar-check"></i> End Date: </strong> {{formatDate endDate}} </p>
+                                                            <p><strong><i class="mdi mdi-calendar-check"></i> File Date: </strong> {{formatDate fileDate}}
+                                                              </p>
+                                                          </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="pull-right m-t-30">
+                                                              <p><strong><i class="mdi mdi-clipboard-account"></i> Remitance Progress: </strong> <span class="label capitalize {{getCssClassNameForRemittanceProgress remitanceProgress}}">{{remitanceProgress}}</span></p>
+                                                              <p><strong><i class="mdi mdi-calendar-check"></i> Claim status: </strong> <span class="label capitalize {{getCssClassNameForClaimStatus claimStatus}}">{{claimStatus}}</span>                                  </p>
+                                                              <p><strong><i class="mdi mdi-calendar-check"></i> Status: </strong> <span class="label capitalize {{getCssClassNameForStatus status}}">{{status}}</span></p>
+                                                            </div>
+                                                          </div>
+                                                  </div>
+                                                  <!-- end row -->
+
+                                                  <div class="m-h-50"></div>
+
+                                                  <div class="row">
+                                                      <div class="col-md-12">
+                                                          <div class="table-responsive">
+                                                              <table class="table m-t-30 transaction-table-breakdown">
+                                                                  <thead>
+                                                                    <tr>
+                                                                    <th>Summarry</th>
+                                                                    <th>Amount</th>
+                                                                    </tr>
+                                                                  </thead>
+                                                                  <tbody>
+                                                                    <tr>
+                                                                      <td>Amount in claim status</td>
+                                                                      <td>{{formatMoney amountInClaim 'NGN'}}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                      <td>Amount</td>
+                                                                      <td>{{formatMoney amount 'NGN'}}</td>
+                                                                    </tr>
+                                                                  </tbody>
+                                                                </table>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="row">
+                                                      <div class="col-md-12">
+                                                          <div class="clearfix m-t-40">
+                                                              <h5 class="small text-inverse font-600">PAYMENT TERMS AND POLICIES</h5>
+
+                                                              <small>
+                                                                  All accounts are to be paid within 7 days from receipt of
+                                                                  invoice. To be paid by cheque or credit card or direct payment
+                                                                  online. If account is not paid within 7 days the credits details
+                                                                  supplied as confirmation of work undertaken will be charged the
+                                                                  agreed quoted fee noted above.
+                                                              </small>
+                                                          </div>
+                                                      </div>
+                                                      <div class="col-md-3 col-sm-6 col-xs-6 col-md-offset-3">
+                                                          <!--<hr>
+                                                          <h3 class="text-right">USD 2930.00</h3>-->
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+
+                                  </div>
+                              </div>
+
+                              {{/with}}
+
+
+                          </div>
+                      </div>
+                  </section>
+
+
+
+
+              </div>
+              <!-- container -->
+
+          </div>
+          <!-- content -->
+
+          <footer class="footer text-right">
+              2017 © Automated Tax System.
+          </footer>
+
+      </div>
+  </div>
+</template>

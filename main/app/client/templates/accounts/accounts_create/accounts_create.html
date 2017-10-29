@@ -1,0 +1,258 @@
+<template name="AccountsCreate">
+  <div class="accounts-create">
+      <div class="content-page">
+          <!-- Start content -->
+          <div class="content">
+              <div class="container">
+
+                  <div class="page-title-box">
+                      <div class="row">
+                          <div class="col-sm-6">
+                              <h4 class="page-title"><i class="mdi mdi-account-card-details"></i> New User Account</h4>
+                          </div>
+
+                          <div class="col-sm-6">
+                              <div class="sub-head-mar pull-right">
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+                  <!-- end row -->
+
+
+
+
+
+
+
+                  <!--new user -->
+                  <section class="content-display">
+                      <div class="row">
+                          <div class="col-md-12 col-lg-10 col-lg-offset-1">
+                              <div class="row m-t-40">
+                                  <div class="col-sm-12">
+
+                                      <!--form-->
+                                      <div class="card-box">
+                                          <form action="">
+                                              <div class="row">
+                                                  <div class="col-sm-12">
+                                                      <fieldset class="fsStyle">
+                                                          <!--vehicle fieldset-->
+                                                          <legend class="legendStyle">
+
+                                                              <a data-toggle="collapse" data-target="#" href="#"><i class="mdi mdi-account-location"></i> Basic Information</a>
+
+                                                          </legend>
+
+                                                          <div class="row" id="">
+                                                              <!--basic information first row-->
+
+                                                              <div class="col-xs-12 col-sm-6 col-md-4">
+                                                                  <!--first name input-->
+
+                                                                  <div class="form-group">
+                                                                      <label>First Name</label>
+                                                                      <input type="text" class="form-control" name="fname" id="fname" placeholder="enter your firstname" value="">
+                                                                  </div>
+
+                                                              </div>
+                                                              <!--end first name input-->
+
+                                                              <div class="col-xs-12 col-sm-6 col-md-4">
+
+                                                                  <div class="form-group">
+                                                                      <label>Last Name</label>
+                                                                      <input type="text" class="form-control" name="lname" id="lname" placeholder="enter your last name" value="">
+                                                                  </div>
+
+                                                              </div>
+
+                                                              <div class="col-xs-12 col-sm-6 col-md-4">
+
+                                                                  <div class="form-group">
+                                                                      <label>Middle Name</label>
+                                                                      <input type="text" class="form-control" name="mname" id="mname" placeholder="enter middle name" value="">
+                                                                  </div>
+
+                                                              </div>
+
+                                                          </div>
+                                                          <!--vehicle first row-->
+
+                                                          <div class="row" id="">
+                                                              <!--vehicle second row-->
+
+
+                                                              <div class="col-xs-12 col-sm-4">
+                                                                  <div class="form-group">
+                                                                      <label>Sex</label>
+                                                                      <select class="form-control" name="type" id="gender">
+                                                                          <option value='' selected disabled>--choose sex--</option>
+                                                                          <option value='male'> Male </option>
+                                                                          <option value='female'> Female </option>
+                                                                      </select>
+                                                                  </div>
+                                                              </div>
+
+
+                                                              <div class="col-xs-12 col-sm-4">
+                                                                  <div class="form-group">
+                                                                      <label>Marital Status</label>
+                                                                      <select class="form-control" name="type" id="maritalStatus">
+                                                                          <option value='' selected disabled>--Status--</option>
+                                                                          <option value='single'> Single </option>
+                                                                          <option value='married'> Married </option>
+                                                                      </select>
+                                                                  </div>
+                                                              </div>
+
+
+                                                              <div class="col-xs-12 col-sm-4">
+
+                                                                  <div class="form-group">
+                                                                      <label>Date of Birth</label>
+                                                                      <div>
+                                                                          <div class="input-group">
+                                                                              <input type="text" class="form-control" placeholder="mm/dd/yyyy" id="datepicker-autoclose">
+                                                                              <span class="input-group-addon bg-custom b-0"><i class="mdi mdi-calendar text-white"></i></span>
+                                                                          </div>
+                                                                          <!-- input-group -->
+                                                                      </div>
+                                                                  </div>
+
+                                                              </div>
+
+
+
+                                                          </div>
+                                                          <!--vehicle second row-->
+
+
+                                                          <div class="row" id="">
+                                                              <!--vehicle third row-->
+
+                                                              <div class="col-xs-12 col-sm-6 col-md-4">
+                                                                  <div class="form-group">
+                                                                      <label>Plate Number</label>
+                                                                      <input type="text" class="form-control" name="plate" id="plate" placeholder="New Plate Number Only" value="">
+                                                                  </div>
+                                                              </div>
+
+
+                                                          </div>
+                                                          <!--vehicle third row-->
+
+
+
+
+
+                                                      </fieldset>
+                                                      <!--end basic info fieldset-->
+                                                  </div>
+                                              </div>
+
+
+                                              <div class="row">
+                                                  <div class="col-sm-12">
+                                                      <fieldset class="fsStyle">
+                                                          <!--contact information-->
+                                                          <legend class="legendStyle">
+
+                                                              <a data-toggle="collapse" data-target="#demo" href="#"><i class="mdi mdi-google-maps"></i> Contact Information</a>
+
+                                                          </legend>
+
+                                                          <div class="row" id="demo">
+                                                              <!--vehicle first row-->
+                                                              <div class="col-xs-12 col-sm-12">
+                                                                  <!--plate number input-->
+                                                                  <div class="form-group">
+                                                                      <label>Address</label>
+                                                                      <input type="text" class="form-control" name="adrs" id="address" placeholder="Enter your address" value="">
+                                                                  </div>
+                                                              </div>
+                                                              <!--end plate number input-->
+                                                          </div>
+                                                          <!--end vehicle first row-->
+
+                                                          <div class="row" id="demo">
+                                                              <!--vehicle second row-->
+
+
+                                                              <div class="col-xs-12 col-sm-4">
+
+                                                                  <div class="form-group">
+                                                                      <label>Email</label>
+                                                                      <input type="email" class="form-control" id="personalEmail" name="email" placeholder="enter your email address" value="">
+                                                                  </div>
+
+                                                              </div>
+
+                                                              <div class="col-xs-12 col-sm-4">
+
+                                                                  <div class="form-group">
+                                                                      <label>Telephone No.</label>
+                                                                      <input type="text" class="form-control" id="telephone" name="tel" placeholder="eneter telephone number" value="" />
+                                                                  </div>
+
+                                                              </div>
+
+                                                              <div class="col-xs-12 col-sm-4">
+
+                                                                  <div class="form-group">
+                                                                      <label>mobile No.</label>
+                                                                      <input type="text" class="form-control" id="mobileNumber" name="tel" placeholder="eneter telephone number" value="" />
+                                                                  </div>
+
+                                                              </div>
+
+                                                          </div>
+                                                          <!--vehicle second row-->
+
+
+
+
+                                                      </fieldset>
+                                                      <!--end vehicle fieldset-->
+                                                  </div>
+                                              </div>
+
+                                              <div class="row">
+                                                  <div class="col-sm-12">
+                                                      <div class="user-form-button pull-right">
+                                                          <button class="btn btn-danger">Cancel</button>
+                                                          <button id="submitButton" class="btn btn-success">Save</button>
+                                                      </div>
+
+                                                  </div>
+                                              </div>
+
+                                          </form>
+                                      </div>
+                                      <!--end form-->
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </section>
+                  <!--new user -->
+
+
+
+
+              </div>
+              <!-- container -->
+
+          </div>
+          <!-- content -->
+
+          <footer class="footer text-right">
+              2017 © Automated Tax System.
+          </footer>
+
+      </div>
+  </div>
+</template>

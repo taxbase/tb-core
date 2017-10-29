@@ -1,0 +1,168 @@
+<template name="ApplicationLayout">
+    {{#if show}}
+        <div class="notifications">
+            <div>
+                <div class="notification" style="display: block; opacity: 1;">
+                    <span class="glyphicon glyphicon-refresh glyphicon-spin"></span>
+                    <div class="meta">
+                        <span class="title-notification">Connecting</span>
+
+                        <span class="description">Trying to connect to server {{timeToConnect}}s</span>
+                        <span class="retry"><a href="#">Retry now</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/if}}
+
+    <div id="wrapper">
+        <div class="topbar">
+            <div class="topbar-left">
+                <a href="{{pathFor "home"}}" class="logo"><img src="/images/firs-logo.png" alt="user-img" class=""></a>
+            </div>
+
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container">
+
+                    <!-- Navbar-left -->
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <button class="button-menu-mobile open-left waves-effect">
+                                <i class="mdi mdi-menu"></i>
+                            </button>
+                        </li>
+                        <li class="hidden-xs">
+                            <a href="#" class="menu-item">{{tenantName}}</a>
+                        </li>
+                        <li class="hidden-xs">
+                        </li>
+                    </ul>
+
+                    <!-- Right(Notification) -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- <li>
+                            <a href="#" class="right-menu-item">
+                                <i class="mdi mdi-bell"></i>
+                                <span class="badge up bg-success">4</span>
+                            </a>
+                        </li> -->
+
+                        <li class="user-box">
+                            <a href="" class=" waves-effect user-link" aria-expanded="true">
+                                <img src="/images/users/avatar-1.jpg" alt="user-img" class="img-circle user-img"> <span>{{userFullName}}</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="right-bar-toggle right-menu-item logout">
+                                <i class="mdi mdi-logout-variant"></i> <span></span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <!-- end navbar-right -->
+
+                </div>
+                <!-- end container -->
+            </div>
+            <!-- end navbar -->
+        </div>
+        <!-- Top Bar End -->
+
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu">
+            <div class="sidebar-inner slimscrollleft">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">Navigation</li>
+
+                        <li>
+                            <a href="{{pathFor 'home'}}" class="waves-effect  {{activeIfRouteIsIn 'home'}}"><i class="mdi mdi-view-dashboard"></i> <span> Dashboard </span> </a>
+                        </li>
+
+                        <!-- <li class="menu-title">Taxes</li>
+                        <li>
+                            <a href="{{pathFor 'filling.create'}}" class="waves-effect"><i class="mdi mdi-telegram"></i><span>Submit filling</span></a>
+                        </li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect {{ activeIfRouteIs 'exempts'}}"><i class="mdi mdi-alert-circle"></i><span> Exempts </span><span class="menu-arrow"></span></a>
+                            <ul class="list-unstyled" style="{{ displayIfRoute 'exempts' }}">
+                                <li class="{{activeIfRouteIsIn 'zero-rated-products.list'}}"><a href="{{pathFor 'zero-rated-products.list'}}" class="{{activeIfRouteIsIn 'zero-rated-products.list'}}">Zero Rated Goods</a></li>
+                                <li class="{{activeIfRouteIsIn 'none-zero-rated-products.list'}}"><a href="{{pathFor 'none-zero-rated-products.list'}}" class="{{activeIfRouteIsIn 'none-zero-rated-products.list'}}">Goods & services</a></li>
+                            </ul>
+                        </li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect {{ activeIfRouteIs 'adjustments'}}"><i class="mdi mdi-arrange-bring-to-front"></i><span> Adjustments </span><span class="menu-arrow"></span></a>
+                            <ul class="list-unstyled" style="{{ displayIfRoute 'adjustments' }}">
+                                <li class="{{activeIfRouteIsIn 'adjustments.sales'}}"><a href="{{pathFor 'adjustments.sales'}}">Sales Adjustment</a></li>
+                                <li><a href="javascript:void(0);">Inventory Adjustment</a></li>
+                                <li><a href="javascript:void(0);">Other Inventory Adjustment</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class=" mdi mdi-move-resize-variant"></i> <span> Imports</span> </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-store"></i> <span> E-sales to MDAs</span> </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class=" mdi mdi-calculator"></i> <span> Tax calculator</span> </a>
+                        </li> -->
+
+                        <li class="menu-title">Transactions</li>
+                        <!-- <li>
+                            <a href="#" class="waves-effect"><i class="mdi mdi-cash-multiple"></i><span> Wages & Income </span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="waves-effect"><i class="mdi mdi-minus"></i><span> Deductions </span></a>
+                        </li> -->
+                        <li>
+                            <a href="{{pathFor 'fillings.list'}}" class="waves-effect {{activeIfRouteIsIn 'fillings.list'}}"><i class=" mdi mdi-cash"></i><span> Transaction Summary </span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="waves-effect"><i class="mdi mdi-receipt"></i><span> Billings </span></a>
+                        </li>
+
+                        <li class="menu-title">Admin</li>
+                        <li>
+                            <a href="{{pathFor 'account.create'}}" class="waves-effect {{activeIfRouteIsIn 'account.create'}}"><i class="mdi mdi-account-plus"></i><span> Create User </span></a>
+                        </li>
+                        <li>
+                            <a href="{{pathFor 'accounts.list'}}" class="waves-effect {{activeIfRouteIsIn 'accounts.list'}}"><i class="mdi mdi-account-circle"></i><span> Users </span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-settings-variant"></i><span> Account Settings </span></a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+                <div class="clearfix"></div>
+
+                <div class="help-box">
+                    <h5 class="text-muted m-t-0">For Help ?</h5>
+                    <p class=""><span class="text-white">Email:</span> <br/> support@firs.com</p>
+                    <p class="m-b-0"><span class="text-white">Call:</span> <br/> 2349090909090</p>
+                </div>
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+
+
+
+        {{> yield}}
+    </div>
+    <!-- content -->
+
+    <footer class="footer text-right">
+        2017 © Automated Tax System.
+    </footer>
+</template>
+
+

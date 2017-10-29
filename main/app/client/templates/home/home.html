@@ -1,0 +1,221 @@
+<template name="Home">
+    <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="page-title-box">
+                            <h4 class="page-title">Dashboard</h4>
+                            <ol class="breadcrumb p-0 m-0">
+                            </ol>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+
+                <section class="content-display">
+                    <!-- <div class="reminder-alert">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                                    <div class="row">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div class="col-xs-11">
+                                            <strong>Tax submissiom remainder: </strong>  Remember to settle VAT before September 14th, 2 days left for Submission <span> <a href="">Go to VAT Settlement</a></span>
+
+                                        </div>
+                                        <div class="col-xs-1">
+                                            <div class="row">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <section class="income-tiles">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card-box-label">
+                                            <h4 class="pull-left">
+                                                September, 2017
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-box">
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <h6 class="tiles-header"><i class="mdi mdi-calendar-check"></i> Estimated filing September, 2017</h6>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h6 class="tiles-header pull-right"><i class="mdi mdi-clipboard-account"></i> Tax ID: 3567890 </h6>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-sm-7">
+                                            <div class="row">
+
+
+                                                <div class="col-sm-6">
+                                                    <div class="widget-box-three">
+                                                        <a href="breakdown.html">
+                                                            <div class="text-left border-right">
+                                                                <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User This Month"><i class="mdi mdi-file-document-box"></i> Total Income</p>
+                                                                <h2>
+                                                                    <span class="note-sign jnx font-13 font-bold"> {{tenant.baseCurrency.symbol}}</span>
+                                                                    <span class="income-amount" data-plugin="counterup">180,000.00</span>
+                                                                </h2>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <div class="widget-box-three">
+                                                        <a href="breakdown.html">
+                                                            <div class="text-left border-right">
+                                                                <p class="m-0 text-uppercase font-600 font-secondary text-overflow" title="User This Month"><i class="mdi mdi-file-document-box"></i> Vatable Income</p>
+                                                                <h2>
+                                                                    <span class="note-sign jnx font-13 font-bold"> {{tenant.baseCurrency.symbol}}</span>
+                                                                    <span class="income-amount" data-plugin="counterup">125,000.00</span>
+                                                                    <!--<small class="text-inverse dash-percentage jnx font-13 font-bold"><i class="mdi mdi-checkbox-blank"></i></small>-->
+                                                                </h2>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-5">
+                                            <a href="breakdown.html">
+                                                <div class="wigdet-one-content">
+                                                    <a href="breakdown.html">
+                                                        <div class="text-left ">
+
+                                                            <p class="m-0 text-uppercase text-theme font-600 font-secondary text-overflow" title="User This Month"><i class="fa fa-percent" aria-hidden="true"></i> VAT Payable</p>
+                                                            <h2 class="font-bold">
+                                                                <span class="note-sign jnx font-13 text-theme"> {{tenant.baseCurrency.symbol}}</span>
+                                                                <span class="income-amount font-50 text-theme" data-plugin="counterup">15,000.00</span>
+                                                                <small class="text-danger dash-percentage jnx font-15"><i class="mdi mdi-calendar-clock"></i> Due 2nd Sept 2017 </small>
+                                                            </h2>
+                                                            <p></p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </a>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="tiles-footer">
+                                                <div class="row">
+                                                    <div class="col-sm-7">
+                                                        <!-- <p>The tax returns together with the relevant payment is due not later than 21st day following the month of transaction. Click the dispute button if any otherwise proceed to payment by clicking on the payment button </p> -->
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <div class="col-sm-6">
+                                                            <div class="">
+                                                                <a href="{{pathFor 'filling.create'}}" class="btn btn-danger main-action-btn"><i class="fa fa-ban" aria-hidden="true"></i> Dispute Bill</a>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="">
+                                                                <a href="{{pathFor 'breakdown'}}" class="btn btn-success main-action-btn"><i class="mdi mdi-credit-card"></i> Proceed to Payment</a>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                            </section>
+
+
+
+                            <!-- start recent-bill-wrap -->
+                            <section class="recent-bill-wrap">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card-box-label">
+                                            <h4 class="pull-left">
+                                                Recent Filling
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="recent-bill-list-alt">
+                                            <div class="card-box">
+
+                                                <table class="tablesaw m-t-20 table table-responsive" id="datatable-editable">
+                                                    <thead>
+                                                    <tr>
+
+                                                        <th>PAY ID</th>
+                                                        <th>File Date</th>
+                                                        <th>Amount</th>
+                                                        <th></th>                                                        
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    {{#each fillingsData}}
+                                                    <tr>
+                                                        <td><div class="sp-dt"> <a href="">{{payId}}</a>   </div></td>
+                                                        <td><div class="sp-dt">{{formatDate fileDate}}</div></td>
+                                                        <td><div class="sp-dt">{{formatMoney amount 'NGN'}}</div></td>
+                                                        <td class="actions">
+                                                            <a href="{{pathFor 'filling.detail' _id=_id }}" class="text-theme"><i class="mdi mdi-eye"></i> view</a>
+                                                        </td>
+                                                    </tr>
+                                                    {{/each}}
+                                                    </tbody>
+                                                </table>
+
+                                                <div class="row">
+                                                    {{#unless isFetchingData}}
+                                                        {{#if hasMoreFillings}}
+                                                            <div id="showMoreResults" href="#">&nbsp;</div>
+                                                        {{/if}}
+                                                    {{else}}
+                                                        <!--<div class="col-xs-12">
+                                                            <div class="loading">{{> spinner}}</div>
+                                                        </div>-->
+                                                    {{/unless}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</template>

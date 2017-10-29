@@ -1,0 +1,135 @@
+<template name="FilingsList">
+  <div class="filings-list">
+      <div class="content-page">
+          <!-- Start content -->
+          <div class="content">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-xs-12">
+                          <div class="page-title-box">
+                              <h4 class="page-title">Recent Filling</h4>
+                              <ol class="breadcrumb p-0 m-0">
+                                  <!--<li>
+                                        <a href="#">Zircos</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Dashboard</a>
+                                    </li>
+                                    <li class="active">
+                                        Dashboard
+                                    </li>-->
+                              </ol>
+                              <div class="clearfix"></div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- end row -->
+
+                  <section class="content-display">
+                      <div class="row">
+                          <div class="col-sm-12">
+                              <!-- <div class="main-action">
+                                <div class="row">
+                                  <div class="col-sm-12">
+                                    <div class="main-action-btn pull-right">
+                                      <a href="javascript:void(0);" class="btn btn-success w-lg">Primary Action Tax</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>-->
+
+                              <!-- start recent-bill-wrap -->
+                              <section class="">
+
+                                  <div class="row">
+                                      <div class="col-sm-12">
+                                          <div class="">
+                                              <div class="card-box">
+
+                                                  <div class="row">
+                                                      <div class="col-sm-9">
+                                                          <h4 class="m-t-0 header-title"><b>Recent Filling</b></h4>
+                                                          <!--<p class="text-muted font-13">
+                                                              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                                          </p>-->
+                                                      </div>
+                                                      <div class="col-sm-3">
+                                                          <input type="text" class="form-control pull-right" id="tel" name="tel" placeholder="search" value="">
+                                                      </div>
+                                                  </div>
+
+                                                  <table class="tablesaw m-t-20 table table-striped" id="datatable-editable">
+                                                      <thead>
+                                                      <tr>
+                                                          <th>PAY ID</th>
+                                                          <th>File Date</th>
+                                                          <th>Amount</th>
+                                                          <th></th>
+                                                      </tr>
+                                                      </thead>
+                                                      <tbody>
+                                                        <!--<tr class="billing-header">
+                                                            <td>
+                                                                <div>
+                                                                    <header>
+                                                                        <h4>September 2017</h4>
+                                                                    </header>
+                                                                </div>
+                                                            </td>
+                                                        </tr>-->
+
+                                                        {{#each fillingsData}}
+                                                            {{#with getMonthAndYearOfMonthFillings this}}
+                                                                <tr class="billing-header">
+                                                                    <td>
+                                                                        <div>
+                                                                            <header>
+                                                                                <h4>{{monthFullName}} {{year}}</h4>
+                                                                            </header>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            {{/with}}
+
+                                                            {{#each this}}
+                                                                <tr>
+                                                                    <td><div class="sp-dt"> <a href="">{{payId}}</a>   </div></td>
+                                                                    <td><div class="sp-dt">{{formatDate fileDate}}</div></td>
+                                                                    <td><div class="sp-dt text-nowrap">{{formatMoney amount 'NGN'}}</div></td>
+                                                                    <td class="actions">
+                                                                        <a href="{{pathFor 'filling.detail' _id=_id }}" class="text-theme"><i class="mdi mdi-eye"></i> view</a>
+                                                                    </td>
+                                                                </tr>
+                                                            {{/each}}
+                                                        {{/each}}
+
+                                                      </tbody>
+                                                  </table>
+
+                                                  <div class="row">
+                                                    {{#unless isFetchingData}}
+                                                        {{#if hasMoreFillings}}
+                                                            <div id="showMoreResults" href="#">&nbsp;</div>
+                                                        {{/if}}
+                                                    {{else}}
+                                                        <!--<div class="col-xs-12">
+                                                            <div class="loading">{{> spinner}}</div>
+                                                        </div>-->
+                                                    {{/unless}}
+                                                </div>
+                                              </div>
+
+
+                                          </div>
+                                      </div>
+                                  </div>
+                              </section>
+                              <!-- end recent-bill-wrap-->
+                          </div>
+                      </div>
+                    </section>
+              </div>
+          </div>
+      </div>
+  </div>
+</template>

@@ -1,0 +1,46 @@
+[{
+  "name": "Basic Company",
+  "locale": "en",
+  "timezone": "Africa/Lagos",
+  "currencies": [
+    "NGN",
+    "USD"
+  ],
+  "domains": [
+    "localhost",
+    "dev.example.com"
+  ],
+  "country": "NG",
+  "addressBook": [{
+    "company": "Acme Company Ltd",
+    "fullName": "Petyr Roman",
+    "address1": "259 Etim Inyang",
+    "address2": "Ste. 7",
+    "city": "Victoria Island",
+    "region": "LA",
+    "postal": "101241",
+    "country": "NG",
+    "phone": "8885551212",
+    "isCommercial": true,
+    "isShippingDefault": true,
+    "isBillingDefault": true,
+    "state": "Lagos"
+  }],
+  "defaultRoles": [
+    "admin/all"
+  ],
+  "layout": [{
+    "layout": "ApplicationLayout",
+    "workflow": "ApplicationLayout",
+    "theme": "default",
+    "enabled": true
+  }],
+  "settings": {
+    "rounding": {
+      "NGN": 5
+    },
+    "promotions": {
+      "excludedOrderTypes": [30]
+    }
+  }
+}]

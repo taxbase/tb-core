@@ -1,0 +1,524 @@
+<template name="FilingsCreate">
+	<div class="filings-create">
+		<div class="content-page">
+			<!-- Start content -->
+			<div class="content">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-xs-12">
+
+							<div class="page-title-box">
+								<h4 class="page-title">Value Added Tax Return</h4>
+								<ol class="breadcrumb p-0 m-0"></ol>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					<!-- end row -->
+
+
+
+					<form name="filingsCreate" class="fillingsCreateForm">
+
+						<section class="content-display">
+
+
+
+							<div class="row">
+
+								<div class="col-md-12 col-lg-10 col-lg-offset-1">
+
+
+									<section class="filling-block-wrap">
+										<div class="row filling-block">
+
+											<div class="col-sm-8">
+												<div class="filling-form">
+
+                                              <header class="filling-form-header">
+                                                  <h3>Value Added Tax Return Form </h3>
+                                                  <p></p>
+                                                  <p class="text-theme"> Labels with the icon <i class="mdi mdi-link-variant"></i> are autofilled with the total calculated from the title section , click the label to edit </p>
+                                              </header>
+
+
+													<!--form-->
+
+													<div class="row">
+														<div class="col-sm-6">
+															<div class="form-group">
+																<label>Date of submission</label>
+																<div>
+																	<div class="input-group">
+																		<input name="submissionDate" type="text" class="form-control" placeholder="mm/dd/yyyy" id="datepicker">
+																		<span class="input-group-addon bg-custom-c b-0"><i class="mdi mdi-calendar text-white"></i></span>
+																	</div>
+																	<!-- input-group -->
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-6">
+
+														</div>
+													</div>
+
+													<div class="card-box">
+														<div class="row">
+															<div class="col-sm-12">
+																<fieldset class="fsStyle">
+																	<!--vehicle fieldset-->
+																	<legend class="legendStyle">
+
+																		<a data-toggle="collapse" data-target="#" href="#"><i class="mdi mdi-account-location"></i> Sales / Income </a>
+
+																	</legend>
+
+
+
+																	<div class="row" id="">
+																		<!--vehicle second row-->
+
+
+																		<div class="col-xs-12 col-sm-6">
+																			<div class="form-group">
+																				<label>Total Sales/Income Exclusive of VAT</label>
+																				<input type="text" class="form-control" name="totalSalesVATExclusive" id="" placeholder="" value="">
+																			</div>
+																		</div>
+
+
+                                                                      <div class="col-xs-12 col-sm-6">
+                                                                          <div class="form-group">
+                                                                              <div class="row">
+                                                                                  <div class="col-sm-7">
+                                                                                        <label class=""><a href="" class="text-custom-c"><i class="mdi mdi-link-variant"></i> Goods and Services Exempted</a></label>
+                                                                                  </div>
+                                                                                  
+                                                                                  <div class="col-sm-5">
+                                                                                                <input type="file" class="filestyle" data-input="false" id="filestyle-1" tabindex="-1" style="position: absolute; clip: rect(0px 0px 0px 0px);">
+                                                                                                <div class="bootstrap-filestyle input-group pull-right"><span class="group-span-filestyle " tabindex="0"><label for="filestyle-1" class="btn btn-upload "><span class="icon-span-filestyle glyphicon glyphicon-folder-open"></span> <span class="buttonText">Choose file</span></label>
+                                                                                                  </span>
+                                                                                                </div>
+                                                                                  </div>
+                                                                              </div>
+                                                                              
+                                                                              <input type="text" class="form-control" name="" id="" placeholder="" value="50000000">
+                                                                              
+                                                                          </div>
+                                                                      </div>
+
+																	</div>
+
+
+																	<div class="row" id="">
+																		<!--vehicle second row-->
+
+
+                                                                      <div class="col-xs-12 col-sm-6">
+                                                                          <div class="form-group">
+
+                                                                            <div class="row">
+                                                                                <div class="col-sm-7">
+                                                                                        <label><a href="" class="text-custom-c"><i class="mdi mdi-link-variant"> </i> Zero Rated Goods & Services</a></label>
+
+                                                                                </div>
+                                                                                <div class="col-sm-5">
+                                                                                        <input type="file" class="filestyle" data-input="false" id="filestyle-1" tabindex="-1" style="position: absolute; clip: rect(0px 0px 0px 0px);">
+                                                                                        <div class="bootstrap-filestyle input-group pull-right"><span class="group-span-filestyle " tabindex="0"><label for="filestyle-1" class="btn btn-upload "><span class="icon-span-filestyle glyphicon glyphicon-folder-open"></span> <span class="buttonText">Choose file</span></label>
+                                                                                          </span>
+                                                                                        </div>
+
+                                                                                </div>
+                                                                            </div>
+                                                                              <input type="text" class="form-control" name="" id="" placeholder="" value="50000000">
+                                                                          </div>
+                                                                      </div>
+
+
+                                                                      <div class="col-xs-12 col-sm-6">
+                                                                          <div class="form-group">
+
+                                                                            <div class="row">
+                                                                                <div class="col-sm-7">
+                                                                              <label><a href="" class="text-custom-c"><i class="mdi mdi-link-variant"> </i>Sales Adjusted</a></label>
+                                                                                </div>
+                                                                                <div class="col-sm-5">
+                                                                                        <input type="file" class="filestyle" data-input="false" id="filestyle-1" tabindex="-1" style="position: absolute; clip: rect(0px 0px 0px 0px);">
+                                                                                        <div class="bootstrap-filestyle input-group pull-right"><span class="group-span-filestyle " tabindex="0"><label for="filestyle-1" class="btn btn-upload "><span class="icon-span-filestyle glyphicon glyphicon-folder-open"></span> <span class="buttonText">Choose file</span></label>
+                                                                                          </span>
+                                                                                        </div>
+                                                                          </div>
+                                                                            </div>
+                                                                              <input type="text" class="form-control" name="" id="" placeholder="" value="50000000">
+                                                                          </div>
+                                                                      </div>
+
+																	</div>
+																	<!--vehicle second row-->
+
+
+																	<div class="row" id="">
+																		<!--vehicle third row-->
+
+																		<div class="col-xs-12 col-sm-6">
+																			<div class="form-group">
+																				<label>Sales/Income Subject to VAT</label>
+																				<input type="text" class="form-control" name="salesIncomeSubjectToVat" id="" placeholder="" value="">
+																			</div>
+																		</div>
+
+
+																	</div>
+																	<!--vehicle third row-->
+
+
+
+
+
+																</fieldset>
+																<!--end basic info fieldset-->
+															</div>
+														</div>
+
+
+													</div>
+
+
+													<div class="card-box">
+
+														<div class="row">
+															<div class="col-sm-12">
+																<fieldset class="fsStyle">
+																	<!--contact information-->
+																	<legend class="legendStyle">
+
+																		<a data-toggle="collapse" data-target="#demo" href="#"><i class="mdi mdi-google-maps"></i> Purchases / Expenses </a>
+
+																	</legend>
+
+																	<div class="row" id="">
+																		<!--vehicle first row-->
+																		<div class="col-sm-6">
+																			<!--plate number input-->
+																			<div class="form-group">
+																				<label><a href="" class="text-custom-c"><i class="mdi mdi-link-variant"> </i>Purchases not Wholly used in making Zero-Rated Supplies</a></label>
+																				<input type="text" class="form-control" id="tel" placeholder="" value="" name="purchasesNotUsedInZeroRatedSupplies" />
+																			</div>
+																		</div>
+																		<!--end plate number input-->
+																		<div class="col-sm-6">
+																			<!--plate number input-->
+																			<div class="form-group">
+																				<label><a href="" class="text-custom-c"><i class="mdi mdi-link-variant"> </i> Purchases not wholly used in making VATable Supplies</a> </label>
+																				<input type="text" class="form-control" name="purchasesNotUsedInVATSupplies" id="adrs" placeholder="" value="">
+																			</div>
+																		</div>
+																	</div>
+																	<!--end vehicle first row-->
+
+																	<div class="row" id="">
+																		<!--vehicle second row-->
+
+
+
+																		<div class="col-sm-9">
+
+																			<div class="form-group">
+																				<label> Domestic Purchases used for Sales other than Zero Rated and Exempted Goods and services </label>
+																				<input type="text" class="form-control" name="domesticPurchases" id="" placeholder="" value="">
+																			</div>
+
+																		</div>
+
+																		<div class="col-sm-3">
+																			<div class="form-group">
+																				<label><a href="" class="text-custom-c"><i class="mdi mdi-link-variant"> </i>Purchased Imports</a></label>
+																				<input type="text" class="form-control" id="tel" name="importsPurchased" placeholder="" value="" />
+																			</div>
+																		</div>
+
+																	</div>
+																	<!--vehicle second row-->
+
+																	<div class="row" id="">
+																		<!--vehicle second row-->
+
+
+																		<div class="col-sm-6">
+
+																			<div class="form-group">
+																				<label>VAT Suffered on VATable Domestic Supplies</label>
+																				<input type="text" class="form-control" name="vatOnDomesticSupplies" id="email" placeholder="" value="">
+																			</div>
+
+																		</div>
+
+																		<div class="col-sm-6">
+
+																			<div class="form-group">
+																				<label>Domestic Purchases for Zero Rated Sales</label>
+																				<input type="text" class="form-control" id="tel" name="domesticPurchasesForZeroRatedSales" placeholder="" value="" />
+																			</div>
+
+																		</div>
+
+
+
+																	</div>
+																	<!--vehicle second row-->
+
+
+																	<div class="row" id="">
+																		<!--vehicle second row-->
+
+																		<div class="col-sm-6">
+
+																			<div class="form-group">
+																				<label>VAT Suffered on Zero-Rated Supplies</label>
+																				<input type="text" class="form-control" name="vatOnZeroSupplies" id="email" placeholder="" value="">
+																			</div>
+
+																		</div>
+
+
+
+
+																		<div class="col-sm-6">
+
+																			<div class="form-group">
+																				<label>Total Purchases Subject to VAT Incurred</label>
+																				<input type="text" class="form-control" id="tel" name="totalPurchasesSubjectToVat" placeholder="" value="" />
+																			</div>
+
+																		</div>
+
+																	</div>
+
+
+
+
+																</fieldset>
+																<!--end vehicle fieldset-->
+															</div>
+														</div>
+													</div>
+
+
+													<div class="card-box">
+
+														<div class="row">
+															<div class="col-sm-12">
+																<fieldset class="fsStyle">
+																	<!--contact information-->
+																	<legend class="legendStyle">
+
+																		<a data-toggle="collapse" data-target="#demo" href="#"><i class="mdi mdi-google-maps"></i> VAT Balance for Current Period </a>
+
+																	</legend>
+
+																	<div class="row" id="">
+																		<!--vehicle first row-->
+																		<div class="col-sm-6">
+																			<!--plate number input-->
+																			<div class="form-group">
+																				<label><a href="" class="text-custom-c"><i class="mdi mdi-link-variant"> </i> Input Tax on VAT Withheld by MDAs & Oil and Gas</a> </label>
+																				<input type="text" class="form-control" name="inputTaxOnVatWithheldByMda" id="adrs" placeholder="" value="">
+																			</div>
+																		</div>
+																		<!--end plate number input-->
+																		<div class="col-sm-6">
+																			<!--plate number input-->
+																			<div class="form-group">
+																				<label> Net VAT Balance for Current Period </label>
+																				<input type="text" class="form-control" name="netVatBalance" id="adrs" placeholder="" value="">
+																			</div>
+																		</div>
+																	</div>
+																	<!--end vehicle first row-->
+
+																	<div class="row" id="">
+																		<!--vehicle second row-->
+
+
+																		<div class="col-sm-5">
+
+																			<div class="form-group">
+																				<label><a href="" class="text-custom-c"><i class="mdi mdi-link-variant"> </i>Automatic VAT Payment in Current Period</a></label>
+																				<input type="text" class="form-control" name="automaticVatPayment" id="email" placeholder="" value="">
+																			</div>
+
+																		</div>
+
+																		<div class="col-sm-4">
+
+																			<div class="form-group">
+																				<label>VAT Credit Brought Forward</label>
+																				<input type="text" class="form-control" id="tel" name="vatCreditBroughtForward" placeholder="" value="" />
+																			</div>
+
+																		</div>
+
+																		<div class="col-sm-3">
+
+																			<div class="form-group">
+																				<label>Total VAT Credit</label>
+																				<input type="text" class="form-control" id="tel" name="totalVatCredit" placeholder="" value="" />
+																			</div>
+
+																		</div>
+
+																	</div>
+																	<!--vehicle second row-->
+
+
+																	<div class="row" id="">
+																		<!--vehicle second row-->
+
+
+																		<div class="col-sm-4">
+
+																			<div class="form-group">
+																				<label>Relieved VAT Credit</label>
+																				<input type="text" class="form-control" name="relievedVatCredit" id="email" placeholder="" value="">
+																			</div>
+
+																		</div>
+
+																		<div class="col-sm-4">
+
+																			<div class="form-group">
+																				<label>VAT Credit Carry Forward</label>
+																				<input type="text" class="form-control" id="tel" name="vatCreditCarriedForward" placeholder="" value="" />
+																			</div>
+
+																		</div>
+
+																	</div>
+
+
+
+
+																</fieldset>
+																<!--end vehicle fieldset-->
+															</div>
+														</div>
+													</div>
+
+
+													<div class="">
+
+														<div class="row">
+															<div class="col-sm-12">
+																<fieldset class="fsStyle">
+
+
+
+
+
+
+																</fieldset>
+																<!--end vehicle fieldset-->
+															</div>
+														</div>
+													</div>
+
+													<div class="checkbox checkbox-info">
+														<input id="checkbox4" type="checkbox" checked name="declarationCheckbox">
+														<label for="checkbox4">
+																												DECLARATION:  I declare that the particulars in this return and the accompanying Schedules (input, output and other adjustments) are correct and complete in  accordance with the provisions of Value Added Tax CAP VI LFN, 2004
+																										</label>
+													</div>
+
+
+
+												</div>
+											</div>
+
+
+											<div class="col-sm-4">
+
+												<div class="left-form-panel">
+
+													<div class="steps-guide">
+														<div class="card-box" style="z-index: -1;">
+															<header class="left-panel-header">
+																<h4>Required Information</h4>
+																<p></p>
+
+															</header>
+
+
+															<ul class="progressbar">
+																<li class="active"><a href="" class="active"> Sales / Income </a> </li>
+																<li><a href="">Purchase / Expenses </a> </li>
+																<li><a href=""> VAT Balance for Current Period </a> </li>
+																<li><a href=""> VAT Payable </a> </li>
+															</ul>
+
+														</div>
+													</div>
+
+													<div class="summary-view">
+														<div class="card-box">
+															<div class="breakdown-balance">
+																<header>
+																	<h5 class="font-bold">VAT Summary</h5>
+																	<p>The Value added tax consists of lorem lorem</p>
+																	<hr>
+																</header>
+
+																<p class=""><b>Total Income:</b> 180,000.00</p>
+																<p class="">Vatable Income: 125,000.00</p>
+																<p class="">VAT:</p>
+																<hr>
+																<div class="income-widget-amount">
+																	<h2 class="">
+																		<span class="note-sign jnx font-13 font-bold"> NGN</span>
+																		<span class="income-amount font-bold">15,000.00</span>
+																	</h2>
+																</div>
+
+
+
+															</div>
+														</div>
+
+														<div class="left-panel-submit">
+															<button type="submit" class="btn btn-theme">Submit Filling</button>
+														</div>
+
+													</div>
+
+												</div>
+
+											</div>
+
+
+
+										</div>
+									</section>
+
+
+								</div>
+							</div>
+
+						</section>
+					</form>
+													<!--end form-->
+					
+
+
+				</div>
+				<!-- container -->
+
+			</div>
+			<!-- content -->
+
+			<footer class="footer text-right">
+				2017 © Automated Tax System.
+			</footer>
+
+		</div>
+	</div>
+</template>
