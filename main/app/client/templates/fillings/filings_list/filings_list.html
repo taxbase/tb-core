@@ -155,9 +155,10 @@
                             <div class="recent-bill-list-alt">
                                 <div class="card-box">
 
-                                    <table class="tablesaw m-t-20 table table-responsive" id="datatable-editable">
+                                    <table class="m-t-20 table table-responsive" id="datatable-editable">
                                         <thead>
                                         <tr>
+                                            <th>PAY ID</th>                                                
                                             <th>File Date</th>
                                             <th>Amount</th>
                                             <th></th>                                                        
@@ -166,6 +167,7 @@
                                         <tbody>
                                         {{#each fillingsData}}
                                         <tr>
+                                            <td><div class="sp-dt"> <a href="">{{payId}}</a></div></td>                                                
                                             <td><div class="sp-dt">{{formatDate fileDate}}</div></td>
                                             <td><div class="sp-dt">{{formatMoney amount 'NGN'}}</div></td>
                                             <td class="actions">
