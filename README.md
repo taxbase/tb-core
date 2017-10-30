@@ -1,12 +1,7 @@
-# td-central
+# tb-core
 
-This repo includes the core transaction services for the bulk eCommerce component of the TradeDepot Platform for Customer Orders and Fulfilment, including the following:
+This repo includes the Tax Automation web app.
 
-* Main - the central web app and service
-* Order Service - order-related publications and methods
-* Customers Service - customer-related publications and methods
-* Products Service - product-related publications and methods
-* Promotions Service - promotions engine and related publications and methods
 
 ## Scripts
 Use the following scripts in the `scripts` folder to setup the and manage the services:
