@@ -51,9 +51,9 @@
                                                             <table class="tablesaw m-t-20 table table-striped" id="datatable-editable">
                                                                 <thead>
                                                                 <tr>
-                                                                    <th>PAY ID</th>
-                                                                    <th>File Date</th>
-                                                                    <th>Amount</th>
+                                                                    <th>Date</th>
+                                                                    <th>Taxable income</th>
+                                                                    <th>VAT amount</th>
                                                                     <th></th>
                                                                 </tr>
                                                                 </thead>
@@ -83,9 +83,9 @@
             
                                                                         {{#each this}}
                                                                             <tr>
-                                                                                <td><div class="sp-dt"> <a href="">{{payId}}</a>   </div></td>
                                                                                 <td><div class="sp-dt">{{formatDate fileDate}}</div></td>
                                                                                 <td><div class="sp-dt text-nowrap">{{formatMoney amount 'NGN'}}</div></td>
+                                                                                <td><div class="sp-dt text-nowrap">{{formatMoney 15000 'NGN'}}</div></td>                                                                                
                                                                                 <td class="actions">
                                                                                     <a href="{{pathFor 'filling.detail' _id=_id }}" class="text-theme"><i class="mdi mdi-eye"></i> view</a>
                                                                                 </td>

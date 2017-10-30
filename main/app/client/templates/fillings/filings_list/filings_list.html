@@ -38,22 +38,22 @@
                                 <div class="col-sm-12">
                                     <div class="card-box-label">
                                         <h4 class="pull-left">
-                                            September, 2017
+                                            {{formatDate getSelectedDay}}
                                         </h4>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="card-box">
-
-                                <div class="row">
+                                <!-- <div class="row">
                                     <div class="col-sm-6">
                                         <h6 class="tiles-header"><i class="mdi mdi-calendar-check"></i> Estimated filing September, 2017</h6>
                                     </div>
-                                    <!-- <div class="col-sm-6">
+                                    <div class="col-sm-6">
                                         <h6 class="tiles-header pull-right"><i class="mdi mdi-clipboard-account"></i> Tax ID: 3567890 </h6>
-                                    </div> -->
-                                </div>
+                                    </div>
+                                </div> -->
+
                                 <div class="row">
                                     <div class="col-sm-7">
                                         <div class="row">
@@ -99,7 +99,7 @@
                                                         <h2 class="font-bold">
                                                             <span class="note-sign jnx font-13 text-theme"> {{tenant.baseCurrency.symbol}}</span>
                                                             <span class="income-amount font-50 text-theme" data-plugin="counterup">15,000.00</span>
-                                                            <small class="text-danger dash-percentage jnx font-15"><i class="mdi mdi-calendar-clock"></i> Due 2nd Sept 2017 </small>
+                                                            <small class="text-danger dash-percentage jnx font-15"><i class="mdi mdi-calendar-clock"></i> Due {{formatDate getTwoDaysAfterSelectedDay}} </small>
                                                         </h2>
                                                         <p></p>
                                                     </div>
@@ -140,15 +140,15 @@
                 </div>
 
                 <section class="recent-bill-wrap">
-                    <!-- <div class="row">
+                    <div class="row">
                         <div class="col-sm-12">
                             <div class="card-box-label">
                                 <h4 class="pull-left">
-                                    Recent Filling
+                                    All Transactions
                                 </h4>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 
                     <div class="row">
                         <div class="col-sm-12">

@@ -17,6 +17,16 @@ Template.FilingsList.helpers({
     hasMoreFillings: function () {
         let numFillings = Transactions.find().count()
         return numFillings >= Template.instance().limit.get()
+    },
+    getSelectedDay: function() {
+        let selectedDay = Template.instance().selectedDay.get();
+        return selectedDay ? selectedDay : ''
+    },
+    getTwoDaysAfterSelectedDay: function() {
+        let selectedDay = Template.instance().selectedDay.get();
+        if(selectedDay) {
+            return moment(selectedDay).add(2, 'day').toDate()
+        }
     }
 });
 
@@ -29,6 +39,10 @@ Template.FilingsList.onCreated(function () {
   
   self.loaded = new ReactiveVar(0);
   self.limit = new ReactiveVar(getLimit());
+
+  self.selectedDay = new ReactiveVar();
+  let now = moment();
+  self.selectedDay.set(now.subtract(1, 'day').startOf('day').toDate());
 
   self.isFetchingData = new ReactiveVar()
   self.isFetchingData.set(true)
