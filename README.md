@@ -1,6 +1,6 @@
 # tb-core
 
-This repo includes the Tax Automation web app.
+This repo includes the TaxBase web app.
 
 
 ## Scripts
