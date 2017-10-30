@@ -11,44 +11,13 @@ Template.FilingsList.events({
 /* FilingsList: Helpers */
 /*****************************************************************************/
 Template.FilingsList.helpers({
-  'fillingsData': () => {
-      let fillings = Transactions.find().fetch();
-      
-      let groupedResults = _.groupBy(fillings, (result) => moment(result['fileDate']).month());
-
-      let groupedResultsAsArray = []
-      let allKeys = Object.keys(groupedResults)
-
-      allKeys.forEach(function(keyName) {
-          groupedResultsAsArray.push(groupedResults[keyName]);
-      });
-
-      return groupedResultsAsArray
-  },
-  hasMoreFillings: function () {
-      let numFillings = Transactions.find().count()
-      return numFillings >= Template.instance().limit.get();
-  },
-  getMonthAndYearOfMonthFillings: function(monthFillings) {
-    let firstFilling = monthFillings[0]
-
-    let monthFullName = moment(firstFilling.fileDate).format('MMMM');
-    let year = moment(firstFilling.fileDate).format('YYYY');
-
-    return {monthFullName, year}
-  },
-  getCssClassNameForStatus: function(status) {
-    if (status === 'pending') {
-      return 'text-warning'
-    } else if(status === 'rejected') {
-      return 'text-danger'
-    } else if(status === 'approved') {
-      return 'text-success'
+    'fillingsData': () => {
+        return Transactions.find();
+    },
+    hasMoreFillings: function () {
+        let numFillings = Transactions.find().count()
+        return numFillings >= Template.instance().limit.get()
     }
-  },
-  eq: function(a, b) {
-    return a === b
-  }
 });
 
 /*****************************************************************************/
